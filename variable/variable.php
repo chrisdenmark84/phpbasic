@@ -16,6 +16,8 @@
 
     echo "There is a person called $name<br>";
     echo "They are $age years old<br>";
+
+    $name = "Barry";
     echo "$name likes their name but wishes they were not $age years old<br>";
 
     ?>
