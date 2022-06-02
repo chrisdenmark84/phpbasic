@@ -10,8 +10,9 @@
 
 <body>
     <?php
+
     $name = "Chris";
-    $age = 73;
+    $age = 80;
 
     echo "There is a person called $name<br>";
     echo "They are $age years old<br>";
