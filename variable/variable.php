@@ -10,6 +10,12 @@
 
 <body>
     <?php
+    $name = "Chris";
+    $age = 73;
+
+    echo "There is a person called $name<br>";
+    echo "They are $age years old<br>";
+    echo "$name likes their name but wishes they were not $age years old<br>";
 
     ?>
 </body>
