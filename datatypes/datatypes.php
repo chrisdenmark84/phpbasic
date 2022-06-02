@@ -12,7 +12,13 @@
 
     <?php
 
+    $string = "This is a string";
+    $wholeNumber = 1;
+    $floatingNumber = 10.9;
+    $boolean = true;
+    $err = NULL;
 
+    echo "$string , $wholeNumber , $floatingNumber, $boolean, $err";
 
 
     ?>
