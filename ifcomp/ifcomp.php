@@ -12,6 +12,29 @@
 
     <?php
 
+    function getMax2($num1, $num2)
+    {
+        if ($num1 > $num2) {
+            return $num1;
+        } else {
+            return $num2;
+        }
+    }
+
+    echo getMax2(101, 10);
+
+    function getMax3($num1, $num2, $num3)
+    {
+        if ($num1 >= $num2 && $num1 >= $num3) {
+            return $num1;
+        } elseif ($num2 >= $num1 && $num2 >= $num3) {
+            return $num2;
+        } else {
+            return $num3;
+        }
+    }
+
+    echo getMax3(10, 13, 7);
 
     ?>
 
