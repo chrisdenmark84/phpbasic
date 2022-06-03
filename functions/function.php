@@ -10,6 +10,23 @@
 
 <body>
 
+    <form action="function.php" method="POST">
+        <input type="text" name="fname">
+        <input type="number" name="age">
+        <input type="submit">
+    </form>
+
+    <?php
+
+    function sayHi($name, $age)
+    {
+        echo "Hello $name you are $age years old<br>";
+    }
+
+    sayHi("Chris", 40);
+    sayHi($_POST["fname"], $_POST["age"]);
+
+    ?>
 
 
 
