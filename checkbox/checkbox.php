@@ -12,13 +12,17 @@
 
     <form action="checkbox.php" method="POST">
 
+        Apples<input type="checkbox" name="fruits[]" value="apples">
+        Bananas<input type="checkbox" name="fruits[]" value="bananas">
+        Pears<input type="checkbox" name="fruits[]" value="pears">
 
         <input type="submit">
     </form>
 
     <?php
 
-
+    $fruits = $_POST["fruits"];
+    echo $fruits[0];
 
     ?>
 
