@@ -10,9 +10,16 @@
 
 <body>
 
+    <form action="switch.php" method="POST">
+        What was your grade? <input type="text" name="grade">
+        <input type="submit">
+    </form>
+
 
     <?php
 
+    $grade = $_POST["grade"];
+    echo $grade;
 
     ?>
 
