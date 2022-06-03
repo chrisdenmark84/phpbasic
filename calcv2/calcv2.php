@@ -11,7 +11,9 @@
 <body>
 
     <form action="calcv2.php" method="POST">
-
+        First Number: <input type="number" name="num1"> <br>
+        Second Number: <input type="number" name="num2"> <br>
+        Type of Math: <input type="text" name="op"> <br>
         <input type="submit">
     </form>
 
