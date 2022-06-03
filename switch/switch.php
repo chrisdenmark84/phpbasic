@@ -18,8 +18,32 @@
 
     <?php
 
-    $grade = $_POST["grade"];
+    $grade = strtoupper($_POST["grade"]);
     echo $grade;
+
+    switch ($grade) {
+        case "A":
+            echo "<br>You did amazing!";
+            break;
+        case "B":
+            echo "<br>Great job!";
+            break;
+        case "C":
+            echo "<br>Good effort. Come see me for more feedback.";
+            break;
+        case "D":
+            echo "<br>More work required. Revisit the source material";
+            break;
+        case "E":
+            echo "<br>Let's chat. This wasn't what we were looking for";
+            break;
+        case "F":
+            echo "<br>That's failed. Let's chat";
+            break;
+        default:
+            echo "<br>Invalid Grade";
+    }
+
 
     ?>
 
