@@ -9,11 +9,23 @@
 </head>
 
 <body>
+    <form action="assarray.php" method="POST">
 
+        <input type="text" name="student">
+        <input type="submit">
+
+    </form>
 
 
     <?php
 
+    $grades = array("Keith" => "A+", "Sue" => "B+", "Archie" => "B", "Chris" => "B");
+    echo $grades["Sue"];
+
+    $grades["Chris"] = "D";
+    echo $grades['Chris'];
+
+    echo $grades[$_POST["student"]];
 
 
     ?>
