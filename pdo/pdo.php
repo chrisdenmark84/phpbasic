@@ -33,19 +33,35 @@ include_once 'user.inc.php';
 
 
     ?>
-
-    <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
+    <h2>Search by User ID</h2>
+    <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST" name="idsearch">
         Search ID: <input type="number" name="id">
-        <input type="submit">
+        <input type="submit" name="idbtn">
     </form>
-
+    <hr>
     <?php
     //Id search using function getUserWithCountCheck passing in user submitted ID
     //TODO: I couldn't get it to echo output when sanitising input oddly
-    $object5 = new User;
-    echo $object5->getUserWithCountCheck($_POST['id']);
-    ?>
+    if ($_POST['idbtn']) {
+        $object5 = new User;
+        echo $object5->getUserWithCountCheck($_POST['id']);
+    }
 
+    ?>
+    <h2>Submit User</h2>
+    <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST" name="adduser">
+        First Name: <input type="text" name="fname">
+        Last Name: <input type="text" name="lname">
+        Date of Birth: <input type="date" name="dob">
+        <input type="submit" name="addBtn">
+    </form>
+
+    <?php
+    if ($_POST['addBtn']) {
+        $addUser = new User;
+        $addUser->setUser($_POST['fname'], $_POST['lname'], $_POST['dob']);
+    }
+    ?>
 </body>
 
 </html>

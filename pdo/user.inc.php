@@ -26,4 +26,11 @@ class User extends Dbh
             }
         }
     }
+
+    public function setUser($fname, $lname, $dob)
+    {
+        $sql = "INSERT INTO users (fname, lname, dob) VALUES (?, ?, ?)";
+        $stmt = $this->connect()->prepare($sql);
+        $stmt->execute([$fname, $lname, $dob]);
+    }
 }
