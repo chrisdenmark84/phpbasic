@@ -22,7 +22,7 @@ class User extends Dbh
 
         if ($stmt->rowCount()) {
             while ($row = $stmt->fetch()) {
-                return $row['fname'];
+                return $row['fname'] . " " . $row['lname'] . " " . $row['dob'];
             }
         }
     }

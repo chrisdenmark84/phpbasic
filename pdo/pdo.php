@@ -19,11 +19,13 @@ include_once 'user.inc.php';
     <?php
     // Shows availible db drivers
     // print_r(PDO::getAvailableDrivers());
+
+    //Creates a connection using
     $object = new Dbh;
     $object->connect();
 
-    $object2 = new User;
-    echo $object2->getAllUsers();
+    //$object2 = new User;
+    //echo $object2->getAllUsers();
 
     //   $object3 = new User;
     //    echo $object3->getUserWithCountCheck();
