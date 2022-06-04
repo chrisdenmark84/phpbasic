@@ -13,14 +13,47 @@
 
     <?php
 
+    class Chef
+    {
 
+        function makeChicken()
+        {
+            echo "make Chicken!";
+        }
 
+        function makeSalad()
+        {
+            echo "make Salad";
+        }
 
+        function makeSpecial()
+        {
+            echo "make BBQ Ribs!";
+        }
+    }
 
+    class BritishChef extends Chef
+    {
+
+        function makeGrull()
+        {
+            echo "make Grull!";
+        }
+
+        function makeSpecial()
+        {
+            echo "make Fish n Chips!";
+        }
+    }
+
+    $chef1 = new Chef;
+    $chef1->makeChicken();
+    $chef1->makeSpecial();
+    $chef2 = new BritishChef;
+    $chef2->makeChicken();
+    $chef2->makeSpecial();
 
     ?>
-
-
 
 
 </body>
