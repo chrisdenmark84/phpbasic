@@ -18,9 +18,13 @@
     $wordCount = 404;
     include "article-header.php"
     ?>
-    <hr>
-    <p>Some information. Some information. Some information. Some information. Some information. Some information. Some information. Some information. Some information. Some information. Some information. Some information. Some information. </p>
 
+    <hr>
+
+    <?php include "tools.php" ?>
+
+    <?php echo sayHi("Chris");
+    echo  $feetInMiles ?>
 
     <?php include "footer.html" ?>
 </body>
