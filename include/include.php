@@ -10,13 +10,14 @@
 
 <body>
 
-    <?php
+    <?php include "header.html" ?>
+
+    <h3>Today's news</h3>
+    <hr>
+    <p>Some information. Some information. Some information. Some information. Some information. Some information. Some information. Some information. Some information. Some information. Some information. Some information. Some information. </p>
 
 
-
-    ?>
-
-
+    <?php include "footer.html" ?>
 </body>
 
 </html>
