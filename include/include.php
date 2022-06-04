@@ -12,7 +12,12 @@
 
     <?php include "header.html" ?>
 
-    <h3>Today's news</h3>
+    <?php
+    $title = "My First Post";
+    $author = "Chris";
+    $wordCount = 404;
+    include "article-header.php"
+    ?>
     <hr>
     <p>Some information. Some information. Some information. Some information. Some information. Some information. Some information. Some information. Some information. Some information. Some information. Some information. Some information. </p>
 
