@@ -16,7 +16,6 @@ class User extends Dbh
     // 
     public function getUserWithCountCheck($id)
     {
-        $this->id = $id;
 
         $stmt = $this->connect()->prepare("SELECT * FROM users WHERE id=?");
         $stmt->execute([$id]);
