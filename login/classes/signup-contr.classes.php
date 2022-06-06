@@ -62,5 +62,14 @@ class SignupContr
     }
 
     //add check to see if email/uid is already in db
-
+    private function uidTakenCheck()
+    {
+        $result;
+        if (!$this->checkUser($this->uid, $this->email)) {
+            $result = false;
+        } else {
+            $result = true;
+        }
+        return $result;
+    }
 }
