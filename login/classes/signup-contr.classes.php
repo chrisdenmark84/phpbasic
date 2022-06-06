@@ -1,9 +1,9 @@
 <?php
 
-//update db here
+
 class SignupContr extends Signup
 {
-    private $id;
+    private $uid;
     private $pwd;
     private $pwdRepeat;
     private $email;

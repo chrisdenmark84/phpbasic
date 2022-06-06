@@ -1,3 +1,5 @@
+<?php session_start();  ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,10 +13,7 @@
 <body>
 
     <?php
-
-
-
-
+    include "includes/header.inc.php";
     ?>
     <section class="index-login">
         <div class="wrapper">
@@ -30,7 +29,7 @@
                 </form>
             </div>
             <hr>
-            <!--<div class="index-login-login">
+            <div class="index-login-login">
                 <h4>Login</h4>
                 <p>Have an account? Login here.</p>
                 <form action="includes/login.inc.php" method="POST">
@@ -38,9 +37,14 @@
                     password: <input type="password" name="pwd"><br />
                     <button type="submit" name="submit">Login</button>
                 </form>
-            </div>-->
+            </div>
         </div>
     </section>
+
+
+
+
+
 </body>
 
 </html>
