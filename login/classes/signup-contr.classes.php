@@ -1,7 +1,7 @@
 <?php
 
 //update db here
-class SignupContr
+class SignupContr extends Signup
 {
     private $id;
     private $pwd;
@@ -15,6 +15,38 @@ class SignupContr
         $this->pwdRepeat = $pwdRepeat;
         $this->email = $email;
     }
+
+    public function signupUser()
+    {
+        if ($this->emptyInput() == false) {
+            //echo "empty input!;
+            header("location: ../index.php?error=emptyinput");
+            exit();
+        }
+        if ($this->invalidUid() == false) {
+            //echo "invalid uid!";
+            header("location: ../index.php?error=username");
+            exit();
+        }
+        if ($this->invalidEmail() == false) {
+            //echo "invalid email";
+            header("location: ../index.php?error=email");
+            exit();
+        }
+        if ($this->pwdMatch() == false) {
+            //echo "passwords don't match
+            header("location: ../index.php?error=passwordmatch");
+            exit();
+        }
+        if ($this->uidTakenCheck() == false) {
+            //echo "Username or email already taken";
+            header("location: ../index.php?error=useroremailtaken");
+            exit();
+        }
+        $this->setUser($this->uid, $this->pwd, $this->email);
+    }
+
+
 
     private function emptyInput()
     {
@@ -50,7 +82,7 @@ class SignupContr
     }
 
 
-    private function passwordMatch()
+    private function pwdMatch()
     {
         $result;
         if ($this->pwd !== $this->pwdRepeat) {

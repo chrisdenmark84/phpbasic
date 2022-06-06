@@ -1,6 +1,6 @@
 <?php
 
-if (isset($_POST["subimt"])) {
+if (isset($_POST["submit"])) {
     //Get data from form
     $uid = $_POST["uid"];
     $pwd = $_POST["pwd"];
@@ -9,6 +9,7 @@ if (isset($_POST["subimt"])) {
 
 
     // Instantiate SignupContr class
+    include "../classes/dbh.classes.php";
     include "../classes/signup.classes.php";
     include "../classes/signup-contr.classes.php";
 
@@ -16,13 +17,10 @@ if (isset($_POST["subimt"])) {
 
 
     // Running error handler and user signup
-
+    $signup->signupUser();
 
     // Return to frontpage
-
-
-
-
-
-
+    header("location: ../index.php?error=none");
+} else {
+    header("location: ../index.php?erro=nosubmit");
 }

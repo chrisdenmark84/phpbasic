@@ -22,23 +22,23 @@
                 <h4>SIGN UP</h4>
                 <p>Don't have an account? Sign up here.</p>
                 <form action="includes/signup.inc.php" method="POST">
-                    <input type="text" name="uid">
-                    <input type="password" name="pwd">
-                    <input type="password" name="pwdrepeat">
-                    <input type="email" name="email">
+                    username: <input type="text" name="uid"><br />
+                    password:<input type="password" name="pwd"><br />
+                    retype password: <input type="password" name="pwdrepeat"><br />
+                    email: <input type="email" name="email"><br />
                     <button type="submit" name="submit">Sign Up</button>
                 </form>
             </div>
             <hr>
-            <div class="index-login-login">
+            <!--<div class="index-login-login">
                 <h4>Login</h4>
                 <p>Have an account? Login here.</p>
                 <form action="includes/login.inc.php" method="POST">
-                    <input type="text" name="uid">
-                    <input type="password" name="pwd">
+                    username: <input type="text" name="uid"><br />
+                    password: <input type="password" name="pwd"><br />
                     <button type="submit" name="submit">Login</button>
                 </form>
-            </div>
+            </div>-->
         </div>
     </section>
 </body>
