@@ -1,12 +1,22 @@
-FROM mcr.microsoft.com/vscode/devcontainers/php:8-bullseye
+# Use the official Visual Studio Code Codespaces image as the base image
+FROM codespaces/ubuntu:latest
 
-# update apt
-RUN apt update
+# Install PHP 7.4, MySQL, and Nginx
+RUN apt-get update && apt-get install -y \
+    php7.4 \
+    php7.4-fpm \
+    php7.4-mysql \
+    nginx \
+    mysql-client
 
-# install httpie
-RUN apt install -y httpie
+# Copy the Nginx configuration file
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-# install flyway
-WORKDIR /usr/local
-RUN wget -qO- https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/8.0.0-beta1/flyway-commandline-8.0.0-beta1-linux-x64.tar.gz \
-| tar xvz && sudo ln -s `pwd`/flyway-8.0.0-beta1/flyway /usr/local/bin
+# Copy the PHP application code to the container
+COPY . /var/www/html
+
+# Expose port 80 for Nginx
+EXPOSE 80
+
+# Start Nginx and PHP-FPM when the container launches
+CMD ["nginx", "-g", "daemon off;"]
